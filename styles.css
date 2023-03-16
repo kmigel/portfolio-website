@@ -1,0 +1,75 @@
+:root {
+
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+body {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-size: 32px;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    display: flex;
+    flex-direction: column;
+}
+
+.navbar {
+    position: fixed;
+    height: 44.8px;
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: #eee;
+    background-color: black;
+    border: none;
+    border-bottom: 1px solid greenyellow;
+    font-size: 0.5em;
+}
+.navbar-name {
+    text-align: center;
+}
+.navbar-content {
+    align-items: end;
+    padding-left: 900px;
+}
+.navbar-sections {
+    text-align: center;
+}
+.navbar a {
+    color: #eee;
+    text-decoration: none;
+    padding: 0 10px;
+}
+.navbar a:hover {
+    color: greenyellow;
+    text-decoration: underline;
+    font-size: 1.1em;
+    cursor: pointer;
+}
+
+section {
+    display: flex;
+    height: 100vh;
+    max-height: 100%;
+    width: 100vw;
+    max-width: 100%;
+}
+.intro {
+    align-items: center;
+    justify-content: center;
+    background-color: black;
+    color: #eee;
+}
+.name-cont {
+    display: flex;
+    flex-direction: column;
+    font-size: 1.6em;
+    padding-right: 50px;
+}
+.intro-image {
+    border-radius: 20px;
+}
