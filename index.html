@@ -5,21 +5,40 @@
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
         <meta name="description" content="Kristina Migel's personal portfolio website">
         <link rel="stylesheet" href="styles.css">
+        <link rel="preconnect" href="https://fonts.googleapis.com">
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@300;500;700;900&display=swap" rel="stylesheet">
         <title>Kristina Migel</title>
     </head>
     <body>
         <header>
             <nav class="navbar">
-                <div class="navbar-name">
-                    <p class="nav-name"><a href="#intro">Kristina Migel</a></p>
-                </div>
-                <div class="navbar-content">
-                    <div class="navbar-sections">
-                        <a href="#intro">Home</a>
-                        <a>About</a>
-                        <a>Skills</a>
-                        <a>Projects</a>
-                        <a>Contact</a>
+                <div class="navbar-container">
+                    <div class="navbar-name">
+                        <p class="nav-name"><a href="#intro">Kristina Migel</a></p>
+                    </div>
+                    <div class="navbar-content">
+                        <div class="collapse-container">
+                            <label for="collapse"><img class="collapse-btn" src="images/btn-collapse.svg" alt="collapse-menu-button"></label>
+                            <input id="collapse" type="checkbox">
+                            <div class="collapse-content">
+                                <ul>
+                                    <li><a href="#intro">Home</a></li>
+                                    <li><a>About</a></li>
+                                    <li><a>Skills</a></li>
+                                    <li><a>Projects</a></li>
+                                    <li><a>Contact</a></li>
+                                </ul>
+                            </div>
+                        </div>
+
+                        <div class="navbar-sections">
+                            <a href="#intro">Home</a>
+                            <a>About</a>
+                            <a>Skills</a>
+                            <a>Projects</a>
+                            <a>Contact</a>
+                        </div>
                     </div>
                 </div>
             </nav>
@@ -27,10 +46,10 @@
         <main>
             <section class="intro" id="intro">
                 <div class="name-cont">
-                    <h1 class="name">Kristina Migel</h1>
-                    <h1 class="name-desc">A Full Stack Developer</h1>
+                    <p class="name">Kristina Migel</h1>
+                    <p class="name-desc">Full Stack Developer</h1>
                 </div>
-                <img class="intro-image" src="images/kitty.png" alt="kitty-image">
+                <img class="intro-image" src="images/mypic.png" alt="picture-of-me">
             </section>
             <section class="about">
                 
