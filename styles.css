@@ -14,6 +14,10 @@ h1 {
     margin: 0;
     padding: 0;
 }
+p {
+    margin: 0;
+    padding: 0;
+}
 
 body {
     margin: 0;
@@ -54,7 +58,6 @@ body {
     justify-content: end;
     flex-basis: auto;
     flex-grow: 1;
-    /* padding-left: clamp(10px, 500px, 800px); */
 }
 .navbar-sections {
     text-align: center;
@@ -71,11 +74,17 @@ body {
 }
 
 section {
-    display: flex;
     height: 100vh;
     max-height: 100%;
     width: 100vw;
     max-width: 100%;
+    overflow: auto;
+}
+.section {
+    display: flex;
+    width: 100%;
+    height: 100%;
+    padding: 0 20px;
 }
 .collapse, #collapse, .collapse-content  {
     display: none;
@@ -88,6 +97,7 @@ section {
     justify-content: center;
     background-color: var(--primary-2);
     color: var(--primary-4);
+    width: calc(100% - 40px);
 }
 .name-cont {
     display: flex;
@@ -112,6 +122,41 @@ section {
 .intro-image:hover{
     filter: grayscale(0);
     transition: all .4s ease-in-out;
+}
+
+.about {
+    flex-direction: column;
+    justify-content: center;
+    line-height: 1.3em;
+    gap: 2rem;
+    padding: 0 5vw;
+    width: clamp(300px, 100%, 1200px);
+    height: 100vh;
+}
+.title {
+    text-decoration: underline;
+    text-decoration-thickness: .1em;
+    font-weight: 500;
+    font-size: clamp(2rem,6vw,3.5rem);
+    color: var(--primary-2)
+}
+.about-content {
+    margin-right: calc(100px, 500px, 800px);
+}
+.about-text {
+    color: var(--primary-1);
+    font-size: clamp(.85rem,2.5vw,1.5rem);
+}
+.about-text > * {
+    padding: 10px 0;
+}
+
+.skills {
+    align-items: center;
+    justify-content: center;
+    background-color: var(--primary-2);
+    color: var(--primary-4);
+    width: calc(100% - 40px);
 }
 
 @media screen and (max-width: 800px) {
