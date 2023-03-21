@@ -18,7 +18,6 @@ p {
     margin: 0;
     padding: 0;
 }
-
 body {
     margin: 0;
     padding: 0;
@@ -29,7 +28,22 @@ body {
     flex-direction: column;
     font-weight: 100;
 }
+section {
+    height: 100vh;
+    max-height: 100%;
+    width: 100vw;
+    max-width: 100%;
+    overflow: auto;
+}
+.section {
+    display: flex;
+    width: 100%;
+    height: 100%;
+    padding: 0 20px;
+}
 
+
+/* Navigation bar */
 .navbar {
     position: fixed;
     height: 4rem;
@@ -73,25 +87,14 @@ body {
     cursor: pointer;
 }
 
-section {
-    height: 100vh;
-    max-height: 100%;
-    width: 100vw;
-    max-width: 100%;
-    overflow: auto;
-}
-.section {
-    display: flex;
-    width: 100%;
-    height: 100%;
-    padding: 0 20px;
-}
 .collapse, #collapse, .collapse-content  {
     display: none;
 }
 .collapse-content > ul {
     list-style: none;
 }
+
+/* Home page */
 .intro {
     align-items: center;
     justify-content: center;
@@ -124,21 +127,22 @@ section {
     transition: all .4s ease-in-out;
 }
 
+/* About Me page */
 .about {
     flex-direction: column;
     justify-content: center;
     line-height: 1.3em;
-    gap: 2rem;
+    gap: 2em;
     padding: 0 5vw;
     width: clamp(300px, 100%, 1200px);
     height: 100vh;
+    color: var(--primary-2);
 }
 .title {
     text-decoration: underline;
     text-decoration-thickness: .1em;
     font-weight: 500;
-    font-size: clamp(2rem,6vw,3.5rem);
-    color: var(--primary-2)
+    font-size: clamp(2em,6vw,3.5em);
 }
 .about-content {
     margin-right: calc(100px, 500px, 800px);
@@ -151,14 +155,56 @@ section {
     padding: 10px 0;
 }
 
-.skills {
-    align-items: center;
-    justify-content: center;
+/* My Skills page */
+#skills {
     background-color: var(--primary-2);
     color: var(--primary-4);
-    width: calc(100% - 40px);
+}
+.skills {
+    justify-content: center;
+    flex-direction: column;
+    padding: 0 5vw;
+    width: clamp(300px, 100%, 1200px);
+}
+.skills-cat {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+}
+.skills-title {
+    font-size: clamp(1em, 2vw,1.5em);
+    padding: 20px 0;
+}
+.skills-container {
+    display: flex;
+    flex-wrap: wrap;
+    gap: clamp(1em, 5vw, 2em);
+}
+.skills-item {
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+}
+.skills-img {
+    width: clamp(90px,6vw,200px);
+    background-color: var(--primary-4);
+    padding: clamp(0em, 10%, 1em);
+    border: 5px solid var(--primary-4);
+    border-radius: 20px;
+    transition: .4s all ease-in-out;
+}
+.skills-img:hover {
+    border-color: transparent;
+    background-color: transparent;
+    transform: scale(1.3, 1.3);
+    transition: .4s all ease-in-out;
+}
+.item-name {
+    font-size: clamp(1em, 2vw, 1.5em);
+    margin-top: 0.5em;
 }
 
+/* Media queries */
 @media screen and (max-width: 800px) {
     .navbar {
         font-size: 0.6em;
