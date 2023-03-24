@@ -29,16 +29,13 @@ body {
     font-weight: 100;
 }
 section {
+    box-sizing: border-box;
     height: 100vh;
     max-height: 100%;
     width: 100vw;
     max-width: 100%;
     overflow: auto;
-}
-.section {
     display: flex;
-    width: 100%;
-    height: 100%;
     padding: 0 20px;
 }
 
@@ -95,12 +92,11 @@ section {
 }
 
 /* Home page */
-.intro {
+#intro {
     align-items: center;
     justify-content: center;
     background-color: var(--primary-2);
     color: var(--primary-4);
-    width: calc(100% - 40px);
 }
 .name-cont {
     display: flex;
@@ -128,7 +124,7 @@ section {
 }
 
 /* About Me page */
-.about {
+#about {
     flex-direction: column;
     justify-content: center;
     line-height: 1.3em;
@@ -157,16 +153,16 @@ section {
 
 /* My Skills page */
 #skills {
+    justify-content: center;
+    flex-direction: column;
     background-color: var(--primary-2);
     color: var(--primary-4);
 }
-.skills {
-    justify-content: center;
-    flex-direction: column;
-    padding: 0 5vw;
-    width: clamp(300px, 100%, 1200px);
+#skills .title {
+    margin-left: 5vw;
 }
 .skills-cat {
+    margin-left: 5vw;
     display: flex;
     flex-direction: column;
     gap: 10px;
@@ -202,6 +198,12 @@ section {
 .item-name {
     font-size: clamp(1em, 2vw, 1.5em);
     margin-top: 0.5em;
+}
+
+/* My Projects page */
+#projects {
+    height: 200vh;
+    flex-direction: column;
 }
 
 /* Media queries */
