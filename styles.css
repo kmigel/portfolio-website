@@ -119,7 +119,6 @@ section {
     gap: 2em;
     padding: 0 5vw;
     width: clamp(300px, 100%, 1200px);
-    height: 100vh;
     color: var(--primary-2);
 }
 .title {
