@@ -1,3 +1,9 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
 :root {
     --primary-1: rgb(57, 62, 70);
     --primary-2: rgb(34, 40, 49);
@@ -11,17 +17,8 @@ html {
 
 h1 {
     font-weight: 100;
-    margin: 0;
-    padding: 0;
-}
-p {
-    margin: 0;
-    padding: 0;
 }
 body {
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
     font-size: 32px;
     font-family: 'Montserrat', sans-serif;
     display: flex;
@@ -29,9 +26,7 @@ body {
     font-weight: 100;
 }
 section {
-    box-sizing: border-box;
-    height: 100vh;
-    max-height: 100%;
+    min-height: 100vh;
     width: 100vw;
     max-width: 100%;
     overflow: auto;
@@ -167,7 +162,7 @@ section {
     flex-direction: column;
     gap: 10px;
 }
-.skills-title {
+.skills-title { 
     font-size: clamp(1em, 2vw,1.5em);
     padding: 20px 0;
 }
@@ -182,7 +177,7 @@ section {
     flex-direction: column;
 }
 .skills-img {
-    width: clamp(90px,6vw,200px);
+    width: clamp(90px, 9vw, 200px);
     background-color: var(--primary-4);
     padding: clamp(0em, 10%, 1em);
     border: 5px solid var(--primary-4);
@@ -202,8 +197,53 @@ section {
 
 /* My Projects page */
 #projects {
-    height: 200vh;
+    padding-bottom: 15px;
     flex-direction: column;
+    display: flex;
+    color: var(--primary-2);
+}
+#projects .title {
+    display: flex;
+    gap: .2em;
+}
+.github-btn {
+    width: 50px;
+}
+.projects-container {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 2em;
+}
+.project-item {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+}
+.project-img {
+    border: 5px solid var(--primary-3);
+    border-radius: 10px;
+    max-width: 300px;
+    max-height: 400px;
+    transition: all .4s ease-in-out;
+}
+.project-img:hover {
+    border-color: transparent;
+    transform: scale(1.1, 1.1);
+    transition: all .4s ease-in-out;
+}
+.project-title {
+    text-decoration: none;
+    color: var(--primary-2);
+    padding: 1px;
+    transition: all .2s ease-in-out;
+}
+.project-title:hover {
+    cursor: pointer;
+    color: var(--primary-4);
+    background-color: rgba(34, 40, 49, 0.5);
+    border-radius: 5px;
+    transition: all .2s ease-in-out;
 }
 
 /* Media queries */
